@@ -86,5 +86,7 @@ Note that when you check your code into GitHub, all of your tests will automatic
 
 ## The Table Of Contents 
 
-**reverse-array challenge**
-[The link ](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-reverse/README.md)
+
+[reverse-array ](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-reverse/README.md)
+
+[array-insert-shift](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-insert-shift/README.md)
