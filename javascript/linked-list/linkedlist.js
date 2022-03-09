@@ -16,40 +16,45 @@ class LinkedList {
             this.head = node;
         }
     }
-    append(value) {
-        const node = new Node(value);
-        if(!this.head) { 
-            this.head = node;
-        } else { 
-            let currentNode = this.head;
+    
       
-            while (currentNode.next) {
-                currentNode = currentNode.next;
-            }
-            currentNode.next = node;
-        }
-      }
 
       includes(value) {
         
         let  current = this.head; // Initialize current
 
-        while (current != null) {
+        while (current) {
 
-            if (current.data == value)
+            if (current.value == value){
 
                 return true; // data found
+            }
+
             current = current.next;
         }
         return false; // data not found
     
   }
    
-  
+  toString(){
 
+      let stringLinked ="";
+      let current= this.head;
 
+      while(current){
 
+    stringLinked +=`{${current.value}} -> `
+      
+    current= current.next;
 
+      }
+
+      stringLinked+=`NULL`;
+      return stringLinked;
+
+    
+
+  }
 
 }
 
