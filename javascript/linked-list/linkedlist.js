@@ -9,23 +9,23 @@ class LinkedList {
 
     insert(value) {
         const node = new Node(value);
-        if(!this.head) { //means LL is empty
+        if (!this.head) { //means LL is empty
             this.head = node;
         } else { //means LL is not empty
             node.next = this.head;
             this.head = node;
         }
     }
-    
-      
 
-      includes(value) {
-        
-        let  current = this.head; // Initialize current
+
+
+    includes(value) {
+
+        let current = this.head; // Initialize current
 
         while (current) {
 
-            if (current.value == value){
+            if (current.value == value) {
 
                 return true; // data found
             }
@@ -33,30 +33,101 @@ class LinkedList {
             current = current.next;
         }
         return false; // data not found
-    
-  }
-   
-  toString(){
 
-      let stringLinked ="";
-      let current= this.head;
+    }
 
-      while(current){
+    toString() {
 
-    stringLinked +=`{${current.value}} -> `
-      
-    current= current.next;
+        let stringLinked = "";
+        let current = this.head;
 
-      }
+        while (current) {
 
-      stringLinked+=`NULL`;
-      return stringLinked;
+            stringLinked += `{${current.value}} -> `
 
-    
+            current = current.next;
 
-  }
+        }
 
-}
+        stringLinked += `NULL`;
+        return stringLinked;
+
+    }
+    append(value) {
+        let appended = new Node(value);
+
+        if (!this.head) {
+            this.head = appended;
+            return this.head;
+        }
+
+        let current = this.head;
+
+        while (current.next !== null) {
+            current = current.next;
+        }
+        current.next = appended;
+    }
+
+    insertBefore(value, newValue) {
+
+        let node = new Node(newValue);
+        let current = this.head;
+
+        if (value === this.head.value) {
+            this.insert(newValue);
+            return this.head;
+        }
+
+        while (current.next !== null) {
+            if (current.next.value === value) {
+                node.next = current.next;
+                current.next = node;
+                return this.head;
+            }
+            current = current.next;
+        }
+    }
+
+    insertAfter(value, newValue) {
+        let node = new Node(newValue);
+        let current = this.head;
+
+        while (current) {
+            if (current.value == value) {
+                node.next = current.next;
+                current.next = node;
+                return this.head;
+            }
+
+            current = current.next;
+        }}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = LinkedList;
