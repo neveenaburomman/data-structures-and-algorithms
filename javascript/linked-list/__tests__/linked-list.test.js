@@ -62,8 +62,44 @@ describe('testing Linked List', () => {
     expect(ll.toString()).toEqual("{n} -> {s} -> {b} -> {z} -> NULL");
     
 
-  })
+  })});
 
+describe('linked-list-insertions', () => {
+  
+  it(' testing the append method', () => {
 
+    const ll=new LinkedList();
 
+    ll.append(1);
+    ll.append(9);
+    ll.append(9);
+    ll.append(7);
+    expect(ll.head.value).toBe(1);
+    expect(ll.head.next.value).toBe(9);
+    expect(ll.head.next.next.value).toBe(9);
+    expect(ll.head.next.next.next.value).toBe(7);
+
+  });
+  it(' testing  the insertBefore method', () => {
+    const ll=new LinkedList();
+    ll.append(1);
+    ll.append(9);
+    ll.append(7);
+    ll.insertBefore(7,2)
+    expect(ll.head.value).toBe(1);
+    expect(ll.head.next.value).toBe(9);
+    expect(ll.head.next.next.value).toBe(2);
+    expect(ll.head.next.next.next.value).toBe(7);
+  });
+  it(' testing  the insertAfter method', () => {
+    const ll=new LinkedList();
+    ll.append(1);
+    ll.append(9);
+    ll.append(7);
+    ll.insertAfter(7,2)
+    expect(ll.head.value).toBe(1);
+    expect(ll.head.next.value).toBe(9);
+    expect(ll.head.next.next.value).toBe(7);
+    expect(ll.head.next.next.next.value).toBe(2);
+  });
 });
