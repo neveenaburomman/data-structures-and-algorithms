@@ -15,11 +15,15 @@ arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
 
 ## Whiteboard Process
+**append**
 
 ![append](./whiteboards/append.jpg)
 
+**insert before**
+
 ![insert before](./whiteboards/insertbefore.jpg)
 
+**insert after**
 ![insert after](./whiteboards/insertafter.jpg)
 
 ## Approach & Efficiency
