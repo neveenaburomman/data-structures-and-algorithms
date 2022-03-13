@@ -16,20 +16,22 @@ adds a new node with the given new value immediately after the first node that h
 
 ## Whiteboard Process
 
-[append](./whiteboards/append.jpg)
+![append](./whiteboards/append.jpg)
 
-[insert before](./whiteboards/insertbefore.jpg)
+![insert before](./whiteboards/insertbefore.jpg)
 
-[insert after](./whiteboards/insertafter.jpg)
+![insert after](./whiteboards/insertafter.jpg)
 
 ## Approach & Efficiency
 
 **append**
 Time Complexity: O(N) 
 Auxiliary Space: O(1)
+
 **insert before**
 Time Complexity: O(N) 
 Auxiliary Space: O(1)
+
 **insert after**
 Time Complexity: O(N) 
 Auxiliary Space: O(1)
