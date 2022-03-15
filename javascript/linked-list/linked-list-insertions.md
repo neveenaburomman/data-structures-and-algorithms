@@ -24,6 +24,7 @@ adds a new node with the given new value immediately after the first node that h
 ![insert before](./whiteboards/insertbefore.jpg)
 
 **insert after**
+
 ![insert after](./whiteboards/insertafter.jpg)
 
 ## Approach & Efficiency
