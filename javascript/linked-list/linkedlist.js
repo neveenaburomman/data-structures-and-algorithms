@@ -102,6 +102,31 @@ class LinkedList {
 
             current = current.next;
         }}
+
+        reverselinkedlist (){
+
+           let newOne =new LinkedList();
+            let current =this.head
+            while (current){
+
+         newOne.insert(current.value);
+         current =current.next
+                
+            }
+
+            return newOne;
+
+
+        }
+
+
+
+
+
+
+
+
+        
     }
 
 

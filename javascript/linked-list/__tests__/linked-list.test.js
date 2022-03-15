@@ -103,3 +103,21 @@ describe('linked-list-insertions', () => {
     expect(ll.head.next.next.next.value).toBe(2);
   });
 });
+describe('linked-list-insertions', () => {
+  
+  it(' testing the reverse ', () => {
+
+    const ll=new LinkedList();
+
+    ll.append(1);
+    ll.append(9);
+    ll.append(9);
+    ll.append(7);
+     const newOne = ll.reverselinkedlist();
+    expect(newOne.head.value).toBe(7);
+    expect(newOne.head.next.value).toBe(9);
+    expect(newOne.head.next.next.value).toBe(9);
+    expect(newOne.head.next.next.next.value).toBe(1);
+
+  });
+});

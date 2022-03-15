@@ -21,7 +21,7 @@ adds a new node with the given new value immediately after the first node that h
 [](./whiteboards/insertbefore.jpg)
 **insert after**
 [](./whiteboards/insertafter.jpg)
-
+<img>
 ## Approach & Efficiency
 
 **append**
