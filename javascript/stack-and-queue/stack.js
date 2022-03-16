@@ -18,7 +18,6 @@ class Stack {
     }
 //Returns: the value from node from the top of the stack
 //Removes the node from the top of the stack
-//Should raise exception when called on empty stack
 
 pop(){
     let newStack=new LinkedList;
@@ -27,7 +26,7 @@ pop(){
     
     while (current){
 
-    newStack.insert(current.value);
+    newStack.append(current.value);
 
      current =current.next ;
 
@@ -42,9 +41,7 @@ pop(){
 //Should raise exception when called on empty stack
 peek(){
 
-    
-    this.top = this.storage.head.value ;
-    return this.top ;
+        return this.top ;
 }
 
 
