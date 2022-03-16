@@ -9,7 +9,15 @@ Using a Linked List as the underlying data storage mechanism, implement both a S
 
 ## Approach & Efficiency
 
-O(1) Time performance
+#### Stack 
+
+**push(value)**, **pop()**, **isEmpty()** and **peek()** all take O(1) time and space . We do not run any loop in any of these operations.This is because it takes the same amount of time no matter how many Nodes (n) you have in the stack.
+
+
+#### Queue
+
+Time and space complexity of both operations **enqueue(value)** , **dequeue()**  **peek()** and **iSempty**is O(1) as we only change few pointers in both operations. There is no loop in any of the operations.
+
 
 ## API
 - Stack 
