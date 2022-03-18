@@ -7,6 +7,7 @@ Zip the two linked lists together into one so that the nodes alternate between t
 
 ## Whiteboard Process
 
+![linked-list-zip](https://user-images.githubusercontent.com/90922969/159096233-9d8d36fc-b163-4261-baf4-3aa3f88ecf11.jpg)
 
 ## Approach & Efficiency
 
