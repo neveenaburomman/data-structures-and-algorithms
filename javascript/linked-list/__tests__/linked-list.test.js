@@ -103,9 +103,10 @@ describe('linked-list-insertions', () => {
     expect(ll.head.next.next.next.value).toBe(2);
   });
 });
-describe('linked-list-insertions', () => {
+
+describe('testing kthFromEnd(k) method ', () => {
   
-  it(' testing the reverse ', () => {
+  it(' k is greater than the length of the linked list', () => {
 
     const ll=new LinkedList();
 
@@ -113,11 +114,26 @@ describe('linked-list-insertions', () => {
     ll.append(9);
     ll.append(9);
     ll.append(7);
-     const newOne = ll.reverselinkedlist();
-    expect(newOne.head.value).toBe(7);
-    expect(newOne.head.next.value).toBe(9);
-    expect(newOne.head.next.next.value).toBe(9);
-    expect(newOne.head.next.next.next.value).toBe(1);
 
+    expect(ll.kthFromEnd(5)).toBe("Exception");
+    
   });
+  it(' where k in  the middle of the linked list', () => {
+    const ll=new LinkedList();
+    ll.append(5);
+    ll.append(3);
+    ll.append(1);
+    ll.append(7);
+    expect(ll.kthFromEnd(2)).toBe(3);
+    
+  });
+  it(' Where the linked list is of a size 1', () => {
+    const ll=new LinkedList();
+    ll.append(5);
+    expect(ll.kthFromEnd(0)).toBe(5);
+    
+  });  
 });
+  
+
+

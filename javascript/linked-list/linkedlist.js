@@ -101,56 +101,38 @@ class LinkedList {
             }
 
             current = current.next;
-        }}
-
-        reverselinkedlist (){
-
-           let newOne =new LinkedList();
-            let current =this.head
-            while (current){
-
-         newOne.insert(current.value);
-         current =current.next
-                
-            }
-
-            return newOne;
-
-
         }
-
-
-
-
-
-
-
-
-        
     }
 
 
 
+    kthFromEnd(k) {
+        
+        var newOne = new LinkedList;
+        let current = this.head;
+        let counter = 0;
+        let counter2 = 0
 
+        while (current) {
+            counter += 1;
+            newOne.insert(current.value)
+            current = current.next
+        }
 
+        if (counter < k + 1) { return ("Exception") }
 
+        let current2 = newOne.head
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        while (current2) {
+            while (k != counter2) {
+                counter2 += 1
+                // console.log(counter2);
+                current2 = current2.next
+            }
+            return current2.value
+        }
+    }
+}
 
 
 
