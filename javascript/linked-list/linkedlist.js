@@ -132,6 +132,13 @@ class LinkedList {
             return current2.value
         }
     }
+   
+    
+
+
+
+
+
 }
 
 
