@@ -103,3 +103,35 @@ describe('linked-list-insertions', () => {
     expect(ll.head.next.next.next.value).toBe(2);
   });
 });
+describe('testing kthFromEnd(k) method ', () => {
+  
+  it(' k is greater than the length of the linked list', () => {
+
+    const ll=new LinkedList();
+
+    ll.append(1);
+    ll.append(9);
+    ll.append(9);
+    ll.append(7);
+    expect(ll.kthFromEnd(5)).toBe("Exception");
+    
+  });
+  it(' where k in  the middle of the linked list', () => {
+    const ll=new LinkedList();
+    ll.append(5);
+    ll.append(3);
+    ll.append(1);
+    ll.append(7);
+    expect(ll.kthFromEnd(2)).toBe(3);
+    
+  });
+  it(' Where the linked list is of a size 1', () => {
+    const ll=new LinkedList();
+    ll.append(5);
+    expect(ll.kthFromEnd(0)).toBe(5);
+    
+  });  
+
+  
+
+});
