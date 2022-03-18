@@ -103,6 +103,7 @@ describe('linked-list-insertions', () => {
     expect(ll.head.next.next.next.value).toBe(2);
   });
 });
+
 describe('testing kthFromEnd(k) method ', () => {
   
   it(' k is greater than the length of the linked list', () => {
@@ -113,6 +114,7 @@ describe('testing kthFromEnd(k) method ', () => {
     ll.append(9);
     ll.append(9);
     ll.append(7);
+
     expect(ll.kthFromEnd(5)).toBe("Exception");
     
   });
@@ -131,7 +133,7 @@ describe('testing kthFromEnd(k) method ', () => {
     expect(ll.kthFromEnd(0)).toBe(5);
     
   });  
-
+});
   
 
-});
+
