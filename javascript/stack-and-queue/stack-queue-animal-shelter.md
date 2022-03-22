@@ -7,8 +7,13 @@ The shelter operates using a first-in, first-out approach.
 
 ## Whiteboard Process
 
+![animal shelter](https://user-images.githubusercontent.com/90922969/159563766-ad4f57e3-6466-4f2a-97d9-f7f11a42f9c7.jpg)
 
 
 ## Approach & Efficiency
 
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### Enqueue(animal)
+Time  =>O(n)
+space =>O(1)
+### dequeue(animal)
+Time and Space =>O(1)
