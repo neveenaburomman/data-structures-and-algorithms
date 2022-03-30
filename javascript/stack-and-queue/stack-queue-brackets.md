@@ -13,6 +13,6 @@ representing whether or not the  brackets in the string are
 
 ## Approach & Efficiency
 
-Time complexity will be O(n), because of the loop 
-space complexity will be O(n) , because the length of the stack will depned on the input
+- Time complexity will be O(n), because of the loop 
+- space complexity will be O(n) , because the length of the stack will depned on the input
 
