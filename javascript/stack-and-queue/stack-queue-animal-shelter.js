@@ -24,12 +24,17 @@ dequeue(animal){
    else {
        this.dog.dequeue(animal)
    }}
-   
-   
-
-
-
 }
+   class cats extends animalShelter{
+constructor(){
+super();
+
+this
+}
+
+   }
+
+
 module.exports=animalShelter;
 
 

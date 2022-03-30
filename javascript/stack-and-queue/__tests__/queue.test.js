@@ -15,7 +15,6 @@ describe('testing the queue', () => {
     it('testing enqueue to the queue',()=>{
         let newQueue = new Queue();
         newQueue.enqueue(1);
-        expect(newQueue.rare).toEqual(1)
         newQueue.enqueue(2);
         expect(newQueue.rare).toEqual(2)
     })
