@@ -34,3 +34,6 @@ BinarySearchTree=>>
           time complexity O(n)
 - contains: space complexity O(1)
           time complexity O(n)
+          
+          
+ ### [the code](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/trees/trees.js)
