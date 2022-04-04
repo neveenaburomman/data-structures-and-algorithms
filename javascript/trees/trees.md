@@ -21,19 +21,23 @@ Contains => Argument: value , Returns: boolean indicating whether or not the val
 
 BinaryTree =>>
 
-- preOrder: space complexity O(n)
-          time complexity O(n)
-- inOrder: space complexity O(n)
-          time complexity O(n)
-- postOrder:space complexity O(n)
-          time complexity O(n)
+- preOrder: time complexity O(n) => because we  traverse each node once.
+           space complexity O(h) => because there will be at most h recursive calls on the stack at any given moment, where h is the height of the tree
+
+- inOrder: time complexity O(n) => because we traverse each node once.
+            space complexity O(h)=> because there will be at most h recursive calls on the stack at any given moment, where h is the height of the tree
+
+- postOrder:time complexity O(n)=>  because we traverse each node once.
+            space complexity O(h)=>  because there will be at most h recursive calls on the stack at any given moment, where h is the height of the tree
+          
 
 BinarySearchTree=>>
 
-- add:      space complexity O(1)
-          time complexity O(n)
-- contains: space complexity O(1)
-          time complexity O(n)
+- add:  time complexity O(log(n) => because in order to add  any given value, at most we need to search one branch from each node 
+        space complexity O(1) => because we are not allocating any additional space.
+            
+- contains: time complexity O(n)=>because it will  depend on the number of the nodes
+            space complexity O(1) => because we are not allocating any additional space.
           
           
  ### [the code](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/trees/trees.js)
