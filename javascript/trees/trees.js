@@ -64,74 +64,85 @@ const  Node = require("./node")
         traverse(this.root);
         return arr;
       }  
+
+      getMax() {
+        let arr =this.inOrder();
+        let max = arr[0];
+    
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+            return max;
+        
+      }
+
 }
 
 class BinarySearchTree extends BinaryTree {
 
-    constructor(root = null) {
-      super(root);
-    }
+  constructor(root = null) {
+    super(root);
+  }
 
-    add(value) {
+  add(value) {
 
-        let newNode = new Node(value);
+      let newNode = new Node(value);
 
-        if (this.root === null) {
-          this.root = newNode;
-          return this.root;
-        }
-
-        let traverse = (node) => {
-
-          if (node.value < value) {
-
-            if (node.value < value) {
-                if (node.right) {
-                  walk(node.right);
-                } else {
-                  node.right = newNode;
-                }
-
-          } else if (node.value > value) {
-            if (node.left) {
-              walk(node.left);
-            } else {
-              node.left = newNode;
-            }
-          }
-        };
-        traverse(this.root);
+      if (this.root === null) {
+        this.root = newNode;
         return this.root;
       }
+
+       let traverse = (node) => {
+
+          if (node.value < value) {
+              if (node.right) {
+                traverse(node.right);
+              } else {
+                node.right = newNode;
+              }
+
+        } else if (node.value > value) {
+          if (node.left) {
+            traverse(node.left);
+          } else {
+            node.left = newNode;
+          }
+        }
+      };
+      traverse(this.root);
+      return this.root;
+    }
       
-    }
-    contains(value) { 
+  
+  contains(value) { 
 
-         if (this.root === null){
-        return false;
-         }
+       if (this.root === null){
+      return false;
+       }
 
-     let current = this.root;
+   let current = this.root;
 
-    while (current) {
+  while (current) {
 
-        if (current.value === value) {
-            return true;
-        }
-        else if (value < current.value) {
-            current = current.left;
-        }
+      if (current.value === value) {
+          return true;
+      }
+      else if (value < current.value) {
+          current = current.left;
+      }
 
-        else if  (value > current.value) {
-            current = current.right;
-        }
+      else if  (value > current.value) {
+          current = current.right;
+      }
 
-    }
-    return false
+  }
+  return false
 }
 
-    
-  }
+  
+}
 
   const breadthFirst =(tree)=> {
 
