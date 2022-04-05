@@ -31,6 +31,7 @@ dequeue(pref){
    
 }}
 
+
 class cats extends animalShelter {
     constructor(animal) {
         super(animal);
