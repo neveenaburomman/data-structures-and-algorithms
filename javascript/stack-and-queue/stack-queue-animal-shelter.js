@@ -3,38 +3,56 @@ const queue=require('./queue');
 
 class animalShelter{
 
-    constructor() {
+    constructor(animal) {
 
-        this.cat= new queue();
-        this.dog = new queue();
+        this.animal=new Queue();
         }
        
-enqueue(animal){
- if (animal=="cat"){
-this.cat.enqueue(animal);
-}
-else {
-    this.dog.enqueue(animal)
+enqueue(pref){
+ if (pref.type=="cat"|| "dog"){
+   
+  this.animal.enqueue(pref);
+   
+  }
+else  {
+    return "this shelter for dogs and cats only";
 }}
 
-dequeue(animal){
-    if (animal=="cat"){
-   this.cat.dequeue(animal);
-   }
-   else {
-       this.dog.dequeue(animal)
-   }}
-}
-   class cats extends animalShelter{
-constructor(){
-super();
-
-this
-}
+dequeue(pref){
+    if (pref.type=="cat"|| "dog"){
+   
+  this.animal.dequeue(pref);
+   
+  }
+   else{
+    return "this shelter for dogs and cats only ";
 
    }
+   
+}}
 
 
-module.exports=animalShelter;
+class cats extends animalShelter {
+    constructor(animal) {
+        super(animal);
+    }
+       getCats(){
+        // console.log(this.animal.storage.head.value);
+           return this.animal
+         
+       }
+
+}
+class dogs extends animalShelter {
+    constructor(animal) {
+        super(animal);
+}
+getDogs(){
+    console.log(this.animal);
+    return this.animal
+}
+}
+
+module.exports={animalShelter,cats,dogs};
 
 
