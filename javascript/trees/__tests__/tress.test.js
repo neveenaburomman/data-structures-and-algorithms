@@ -1,5 +1,6 @@
 "use strict";
 const {  BinaryTree, BinarySearchTree, breadthFirst} = require('../trees');
+const treeFizzBuzz =require("../tree-fizz-buzz");
 const Node = require('../node');
 
 
@@ -113,9 +114,54 @@ describe("testing the binary tree", () => {
         tree.root.right.right=new Node(60);
         tree.root.right.left=new Node(70);
 
-      expect(breadthFirst(tree)).toEqual([ 90, 100, 80, 120, 110, 70, 60 ]
-        );
+      expect(breadthFirst(tree)).toEqual([ 90, 100, 80, 120, 110, 70, 60 ] );
       });
 
     });
+/////////////
 
+    describe("testing the tree fizz buzz ", () => {
+
+      it("If the value is divisible by 3, replace the value with Fizz", () => {
+
+        let tree= new BinaryTree();
+        tree.root=new Node (5);;
+        tree.root.left=new Node(2);
+        tree.root.right=new Node(3);
+        treeFizzBuzz(tree)
+        expect(tree.root.right.value).toEqual("Fizz");
+        });
+  
+        it("If the value is divisible by 5, replace the value with “Buzz”", () => {
+  
+         let tree= new BinaryTree();
+        tree.root=new Node (5);;
+        tree.root.left=new Node(2);
+        tree.root.right=new Node(3);
+        treeFizzBuzz(tree)
+        expect(tree.root.value).toEqual("Buzz");
+      });
+
+        it("If the value is divisible by 3 and 5, replace the value with “FizzBuzz”", () => {
+  
+        let tree= new BinaryTree();
+        tree.root=new Node (5);;
+        tree.root.left=new Node(2);
+        tree.root.right=new Node(3);
+        tree.root.left.right=new Node(15);
+        tree.root.right.right=new Node(3);
+        treeFizzBuzz(tree)
+
+        expect(tree.root.left.right.value).toEqual("FizzBuzz");
+      });
+      it("If the value is not divisible by 3 or 5, simply turn the number into a String", () => {
+  
+        let tree= new BinaryTree();
+        tree.root=new Node (5);;
+        tree.root.left=new Node(2);
+        treeFizzBuzz(tree)
+
+        expect(typeof(tree.root.left.value)).toEqual("string");
+      });
+     
+});
