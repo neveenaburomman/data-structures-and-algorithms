@@ -10,7 +10,8 @@ Determine whether or not the value of each node is divisible by 3, 5 or both. Cr
 - If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 - If the value is not divisible by 3 or 5, simply turn the number into a String.
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+![tree-fizz-buzz](https://user-images.githubusercontent.com/90922969/161847395-a75aec7c-5eba-4016-8027-e3a28586ae41.jpg)
 
 ## Approach & Efficiency
  - Time complexity => O(n) where n is the number of nodes in the  tree 
