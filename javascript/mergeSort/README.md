@@ -19,3 +19,7 @@ in this challenge we will Convert the pseudo-code for mergeSort into working cod
 ## blog
 [blog link](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/mergeSort/BLOG.md)
 
+## solution 
+```ruby
+npm test mergeSort
+```
