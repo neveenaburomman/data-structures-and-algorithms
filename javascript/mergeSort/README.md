@@ -8,8 +8,8 @@ in this challenge we will Convert the pseudo-code for mergeSort into working cod
 
 
 
-[Untitled](https://user-images.githubusercontent.com/90922969/165838167-95057bec-187c-4430-9635-e93490a67eb7.jpg)
 
+![Untitled](https://user-images.githubusercontent.com/90922969/165838490-e373e9bf-c029-4f78-ac24-d00cd26f9fbc.jpg)
 
 
 ## Approach & Efficiency
