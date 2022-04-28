@@ -39,3 +39,4 @@ ALGORITHM Merge(left, right, arr)
        set remaining entries in arr to remaining values in left
 ```
 ## visual code
+![vc](https://user-images.githubusercontent.com/90922969/165838557-233677a3-39bf-4244-bfcf-bbf013962681.jpg)
