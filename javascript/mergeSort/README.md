@@ -14,8 +14,9 @@ in this challenge we will Convert the pseudo-code for mergeSort into working cod
 
 ## Approach & Efficiency
 
-        time complexity O(nlog(n) => because merge sort will divide the array into two subarray and takes linear time to merge two halves. 
-        space complexity O(n) => because it requires an additional memory space of 0(n) for the temporary array
+  time complexity O(nlog(n) => because merge sort will divide the array into two subarray and takes linear time to merge two halves. 
+  space complexity O(n) => because it requires an additional memory space of 0(n) for the temporary array
+  
 ## blog
 [blog link](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/mergeSort/BLOG.md)
 
