@@ -11,7 +11,7 @@ in this challenge we will Convert the pseudo-code for insertionSort function  in
 
 ## Approach & Efficiency
 
-  time complexity O(nlog(n) => because It has two loops, which means that as the number of elements n in the array arr grows it will take approximately n * n longer to perform the sorting 
+  time complexity O(n^2) => because It has two loops, which means that as the number of elements n in the array arr grows it will take approximately O(n^2) to perform the sorting 
   space complexity O(1) => because there's no need for an  additional memory .
   
 ## blog
