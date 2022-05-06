@@ -6,6 +6,7 @@ in this challenge we will Convert the pseudo-code for insertionSort function  in
 
 ## Whiteboard Process 
 
+![wb](https://user-images.githubusercontent.com/90922969/167196125-ef351cda-7e40-4610-ba60-b838a9c59b1d.jpg)
 
 
 ## Approach & Efficiency
@@ -14,7 +15,7 @@ in this challenge we will Convert the pseudo-code for insertionSort function  in
   space complexity O(1) => because there's no need for an  additional memory .
   
 ## blog
-
+[blog](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/insertionSort/BLOG.md)
 
 ## solution 
 ```ruby
