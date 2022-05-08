@@ -8,6 +8,7 @@ in this challenge we will Convert the pseudo-code for quickSort function  into w
 
 ## Whiteboard Process 
 
+![wb 3](https://user-images.githubusercontent.com/90922969/167314408-14f78327-7f06-4c32-baec-bd00ccca9a2d.jpg)
 
 
 ## Approach & Efficiency
@@ -16,7 +17,7 @@ in this challenge we will Convert the pseudo-code for quickSort function  into w
     space complexity O(log(n)) =>  based on the space used in the recursion stack.
 
 ## blog
-[blog]()
+[blog](https://github.com/neveenaburomman/data-structures-and-algorithms/blob/main/javascript/quickSort/BLOG.md)
 
 ## solution 
 ```ruby
