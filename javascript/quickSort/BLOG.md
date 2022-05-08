@@ -39,3 +39,5 @@ ALGORITHM Swap(arr, i, low)
 ```
 
 ## visual code
+![s](https://user-images.githubusercontent.com/90922969/167315864-2579a64c-80a2-4226-96de-936278e385c5.jpg)
+
