@@ -1,5 +1,5 @@
 ## insertion sort 
-nsertion sort is a sorting algorithm that places an unsorted element at its suitable place in each iteration.
+insertion sort is a sorting algorithm that places an unsorted element at its suitable place in each iteration.
 
 ## Pseudo Code
 ```ruby
