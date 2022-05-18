@@ -46,10 +46,10 @@ keys(){
         for(let i = 0; i < this.table.length; i++){
           if(this.table[i]){
             let current = this.table[i].head;
-            console.log(current)
+            //console.log(current)
             while(current){
               allkeys.push(current.value.key);
-              console.log()
+              
               current = current.next;
             }
           }
