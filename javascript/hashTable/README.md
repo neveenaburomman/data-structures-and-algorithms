@@ -7,15 +7,21 @@ set , get, contains, keys, hash.
 
 ## Approach & Efficiency
 ### set 
-Time and space complexity
+- Time complexity of adding done in constant time O(1).
+- space complexity is o(1) since there is no additional space being used
 ### get
-Time and space complexity
+- Time complexity is o(1) ,we dont have to loop through the table we can get the value based on the index 
+- space complexity is o(n) because we will loop through the hashmap being used
 ### contains
-Time and space complexity
-### keys
-Time and space complexity
+- Time complexity is  o(1) ,because there is no loop
+- space complexity is o(1) since there is no additional space being used
 ### hash
-Time and space complexity
+- Time complexity is o(1), because there is no loop 
+- space complexity is o(1) since there is no additional space being used
+### keys
+- Time complexity is o(n) because we will loop through the hashmap
+- space complexity is o(n) because we need an array to push the keys on it 
+
 ## API
 ### set 
 this method should hash the key, and set the key and value pair in the table, handling collisions as needed.should a given key already exist, replace its value from the value argument given to this method.
