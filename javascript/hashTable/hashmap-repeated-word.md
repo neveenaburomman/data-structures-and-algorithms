@@ -4,6 +4,7 @@ Write a function called repeated word that finds the first word to occur more th
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
+![repeated word](https://user-images.githubusercontent.com/90922969/169136093-076996d0-b1da-4b8b-8cbd-750bbe7b0e88.jpg)
 
 ## Approach & Efficiency
 
