@@ -6,7 +6,12 @@ Write a function called repeated word that finds the first word to occur more th
 <!-- Embedded whiteboard image -->
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+- Time complexity is o(n), because we will loop through the hashmap
+- space complexity is o(1) since there is no additional space being used
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+```ruby
+npm test hashTable
+
+```
