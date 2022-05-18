@@ -1,6 +1,7 @@
 'use strict';
 
 const HashTable = require('../hashTable');
+const repeatedWord=require('../hashmap-repeated-word');
 
 describe('Hash Table',()=>{
 
@@ -15,6 +16,7 @@ describe('Hash Table',()=>{
 
   it('Successfully returns null for a key that does not exist in the hashtable',()=>{
     expect(hashTable.contain("leen")).toBeNull();
+
 
   });
 
@@ -38,6 +40,20 @@ describe('Hash Table',()=>{
 
     let hashed = hashTable.hash('neveen');
     expect(typeof hashed).toBe('number');
+  });
+
+});
+describe('testing  repeatedWord function ', () => {
+
+  it('Can successfully find the first word that occur more than once', () => {
+  
+    let string ="Once upon a time, there was a brave princess who...";
+    let string2="It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."
+
+    expect(repeatedWord(string)).toEqual("a");
+    expect(repeatedWord(string2)).toEqual("summer");
+
+
   });
 
 });
