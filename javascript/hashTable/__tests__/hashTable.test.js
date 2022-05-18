@@ -17,6 +17,7 @@ describe('Hash Table',()=>{
   it('Successfully returns null for a key that does not exist in the hashtable',()=>{
     expect(hashTable.contain("leen")).toBeNull();
 
+
   });
 
   it('Successfully handle a collision within the hashtable',()=>{
@@ -51,6 +52,7 @@ describe('testing  repeatedWord function ', () => {
 
     expect(repeatedWord(string)).toEqual("a");
     expect(repeatedWord(string2)).toEqual("summer");
+
 
   });
 
