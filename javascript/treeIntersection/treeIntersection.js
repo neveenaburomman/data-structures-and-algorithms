@@ -6,11 +6,11 @@ function treeIntersection(tree1, tree2) {
     const firstTree = tree1.preOrder();
     const secondTree = tree2.preOrder();
 
-    let trees = [tree1, tree2];
+    let trees = [firstTree, secondTree];
     let hashtable = new HashTable();
     let intersectionHash = new HashTable();
 
-    let intersectioArr = [];
+    let intersectionArr = [];
     for (let j = 0; j < 2; j++) {
         for (let i = 0; i < trees[j].length; i++) {
             let element = trees[j][i];
@@ -19,15 +19,15 @@ function treeIntersection(tree1, tree2) {
 
             } else if (!intersectionHash.contain(element)) {
                 intersectionHash.set(element, element);
-                intersectioArr.push(element);
+                intersectionArr.push(element);
             }
         }
     }
-    if (intersectioArr.length === 0) {
+    if (intersectionArr.length=== 0) {
 
         return "no intersections "
     }
-    return intersectioArr;
+    return intersectionArr;
 }
 
 
