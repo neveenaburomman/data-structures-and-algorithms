@@ -13,7 +13,6 @@ function repeatedWord(string) {
 
         }
         if (hashTable.contain(array[i])) {
-
             return array[i];
 
         }

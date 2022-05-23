@@ -2,7 +2,7 @@
 
 const HashTable = require('../hashTable');
 const repeatedWord=require('../hashmap-repeated-word');
-
+const leftJoin=require('../hashmap-left-join');
 describe('Hash Table',()=>{
 
   let hashTable = new HashTable(100);
@@ -55,5 +55,29 @@ describe('testing  repeatedWord function ', () => {
 
 
   });
+  describe('testing  leftJoins function ', () => {
 
+    it('Can successfully find the first word that occur more than once', () => {
+      
+   let Synonyms = new HashTable(100);
+      Synonyms.set("diligent", 'employed')
+      Synonyms.set("fond", 'enamored')
+      Synonyms.set("guide", 'usher')
+      Synonyms.set("outfit", 'garb')
+      Synonyms.set("wrath", 'anger')
+
+   let Antonyms = new HashTable(100);
+      Antonyms.set("diligent", 'idle')
+      Antonyms.set("fond", 'averse')
+      Antonyms.set("guide", 'follow')
+      Antonyms.set("flow", 'jam')
+      Antonyms.set("wrath", 'delight')
+
+      expect(leftJoin (Synonyms, Antonyms)).toEqual([ [ 'fond', 'enamored', 'averse' ],
+      [ 'guide', 'usher', 'follow' ],
+      [ 'diligent', 'employed', 'idle' ],
+      [ 'wrath', 'anger', 'delight' ],
+      [ 'outfit', 'garb', null ] ]); });
+  
+  });
 });
