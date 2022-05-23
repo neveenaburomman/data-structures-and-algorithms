@@ -5,7 +5,9 @@ Write a function that LEFT JOINs two hashmaps into a single data structure.
    - The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
 - Return: The returned data structure that holds the results is up to you. It doesn’t need to exactly match the   output below, so long as it achieves the LEFT JOIN logic.
 
-## Challenge
+## Whiteboard Process
+![leftJOINT](https://user-images.githubusercontent.com/90922969/169876215-d504d522-a9a5-4287-8318-49865725062a.jpg)
+
 <!-- Description of the challenge -->
 
 ## Approach & Efficiency
