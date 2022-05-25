@@ -4,7 +4,7 @@ function repeatedWord(string) {
     let hashTable = new HashTable(100);
     //console.log(HashTable)
 
-    let array = string.split(' ');
+    let array = string.toLowerCase().split(' ');
     console.log(array)
     for (let i = 0; i < array.length; i++) {
         if (array[i].includes(',')) {
