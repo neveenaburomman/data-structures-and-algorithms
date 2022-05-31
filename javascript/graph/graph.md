@@ -28,8 +28,8 @@ immplement a Graph. The graph should be represented as an adjacency list, and sh
   -  space complexity O(1) => because we didn't use any extra space 
                   
 - size()  
- -  time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)  
- -  space complexity O(1) =>  because we didn't use any extra space 
+  -  time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)  
+  -  space complexity O(1) =>  because we didn't use any extra space 
             
 ## API
 - add node
