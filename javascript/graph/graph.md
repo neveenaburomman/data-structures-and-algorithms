@@ -11,20 +11,20 @@ immplement a Graph. The graph should be represented as an adjacency list, and sh
    
 ## Approach & Efficiency
 
-- Add node : - time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)
-             - space complexity O(1) => because we didn't use any extra space  
+- Add node : -  time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)
+             -  space complexity O(1) => because we didn't use any extra space  
              
-- Add edge : - time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n) 
-             - space complexity O(1) => because we didn't use any extra space 
+- Add edge : -  time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n) 
+             -  space complexity O(1) => because we didn't use any extra space 
              
-- Get nodes : - time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)
-              - space complexity O(1) =>  because we didn't use any extra space 
+- Get nodes : -  time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)
+              -  space complexity O(1) =>  because we didn't use any extra space 
               
-- Get neighbors : - time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)
-                  - space complexity O(1) => because we didn't use any extra space 
+- Get neighbors : -  time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)
+                  -  space complexity O(1) => because we didn't use any extra space 
                   
-- size()  : - time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)  
-            - space complexity O(1) =>  because we didn't use any extra space 
+- size()  : -  time complexity O(1) => This is because it takes the same amount of time no matter how many Nodes (n)  
+            -  space complexity O(1) =>  because we didn't use any extra space 
             
 ## API
 - add node
