@@ -1,6 +1,6 @@
 "use strict";
 
-let Graph = require("../graph");
+let {Graph,businessTrip} = require("../graph");
 
 
 
@@ -77,5 +77,37 @@ describe("testing the Graph", () => {
     let graph = new Graph();
 
     expect(graph.isEmpty()).toEqual(null);
+  });
+});
+describe("testing the businessTrip function ", () => {
+  let graph = new Graph();
+  graph.AddNode("Pandora")
+  graph.AddNode("Arendelle")
+  graph.AddNode("Monstropolis")
+  graph.AddNode("Metroville")
+  graph.AddNode("Naboo")
+  graph.AddNode("Narnia")
+
+graph.AddEdge("Pandora", "Arendelle", 150)
+graph.AddEdge("Pandora", "Metroville", 82)
+graph.AddEdge("Arendelle", "Monstropolis", 42)
+graph.AddEdge("Arendelle", "Metroville", 99)
+graph.AddEdge("Metroville", "Naboo", 26)
+graph.AddEdge("Metroville", "Monstropolis", 105)
+graph.AddEdge("Metroville", "Narnia", 37)
+graph.AddEdge("Monstropolis", "Arendelle", 42)
+graph.AddEdge("Monstropolis", "Metroville", 105)
+graph.AddEdge("Monstropolis", "Naboo", 73)
+graph.AddEdge("Naboo", "Narnia", 250)
+
+  it("test graph business trip when two citis are not connected", () => {
+    expect(businessTrip(graph, ['Naboo', 'Pandora'])).toBe(null);
+
+  });
+  it("test graph business trip two cities", () => {
+    expect(businessTrip(graph, ['Pandora', 'Arendelle'])).toBe('150$');
+  });
+  it("test graph business trip when three citis are connected", () => {
+    expect(businessTrip(graph, ['Pandora', 'Arendelle','Monstropolis'])).toBe('192$');
   });
 });
