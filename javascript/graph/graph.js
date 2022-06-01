@@ -24,9 +24,9 @@ class Graph {
 
 
   AddEdge(start, end, weight) {
-    if (!this.adjacencyList.has(start)){
+    if (!this.adjacencyList.has(start)) {
       return this.adjacencyList.has(start);
-    }else{
+    } else {
       const newAdjacencies = this.adjacencyList.get(start);
       newAdjacencies.push(new Edge(end, weight));
     }
@@ -44,7 +44,7 @@ class Graph {
   GetNeighbors(vertex) {
     if (this.adjacencyList.has(vertex)) {
       return this.adjacencyList.get(vertex);
-    }else{
+    } else {
       return 'Vertex does not exist';
     }
   }
@@ -58,7 +58,7 @@ class Graph {
 
 
   isEmpty() {
-    if (!this.adjacencyList.size > 0 ) {
+    if (!this.adjacencyList.size > 0) {
       return null;
     }
   }
@@ -83,6 +83,27 @@ function bfs(start) {
   return result;
 }
 
+function businessTrip(graph, array) {
+
+  let cost = 0;
+
+  for (let i = 0; i < array.length; i++) {
+        let edges = graph.GetNeighbors(array[i]);
+           for (let j = 0; j < edges.length; j++) 
+           {
+                if (edges[j].vertex === array[i + 1])
+                 {
+                   cost += edges[j].weight;
+                            }
+                                }
+  }
+   if (cost === 0) {
+    return null
+  }
+  else {
+    return `${cost}$`;
+  }
+}
 
 
-module.exports = Graph;
+module.exports = {Graph,businessTrip};
