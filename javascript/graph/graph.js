@@ -64,23 +64,41 @@ class Graph {
   }
 }
 
-function bfs(start) {
-  const queue = [start];
-  const result = [];
-  const visited = {};
-  visited[start] = true;
-  let currentVertex;
-  while (queue.length) {
-    currentVertex = queue.shift();
-    result.push(currentVertex);
-    this.adjacencyList[currentVertex].forEach(neighbor => {
-      if (!visited[neighbor]) {
-        visited[neighbor] = true;
-        queue.push(neighbor);
-      }
-    });
-  }
-  return result;
+bfs(startingNode)
+{
+ 
+    // create a visited object
+    var visited = {};
+ 
+    // Create an object for queue
+    var q = new Queue();
+ 
+    // add the starting node to the queue
+    visited[startingNode] = true;
+    q.enqueue(startingNode);
+ 
+    // loop until queue is empty
+    while (!q.isEmpty()) {
+        // get the element from the queue
+        var getQueueElement = q.dequeue();
+ 
+        // passing the current vertex to callback function
+        console.log(getQueueElement);
+ 
+        // get the adjacent list for current vertex
+        var get_List = this.AdjList.get(getQueueElement);
+ 
+        // loop through the list and add the element to the
+        // queue if it is not processed yet
+        for (var i in get_List) {
+            var neigh = get_List[i];
+ 
+            if (!visited[neigh]) {
+                visited[neigh] = true;
+                q.enqueue(neigh);
+            }
+        }
+    }
 }
 
 function businessTrip(graph, array) {
@@ -133,3 +151,4 @@ class DepthFirst extends Graph {
 }
 
 module.exports = {Graph,businessTrip,DepthFirst,Vertex};
+
