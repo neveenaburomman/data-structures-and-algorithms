@@ -1,13 +1,13 @@
 "use strict";
 
-let {Graph,businessTrip} = require("../graph");
+let {Graph,businessTrip,DepthFirst,Vertex} = require("../graph");
 
 
 
 describe("testing the Graph", () => {
 
 
-  it("Node can be successfully added to the graph", () => {
+  it("Node can be successfully Added to the graph", () => {
     let graph = new Graph();
     graph.AddNode(1);
     graph.AddNode(2);
@@ -111,3 +111,45 @@ graph.AddEdge("Naboo", "Narnia", 250)
     expect(businessTrip(graph, ['Pandora', 'Arendelle','Monstropolis'])).toBe('192$');
   });
 });
+
+describe("testing the businessTrip function ", () => {
+
+  it('return all nodes depth first  in correct order', () => {
+    const graph = new DepthFirst();
+
+    const four = new Vertex(4);
+    const nine = new Vertex(9);
+    const one = new Vertex(1);
+    const five = new Vertex(5);
+    const twelve = new Vertex(12);
+    const elven = new Vertex(11);
+
+    const expected = new Set();
+    expected.add(four);
+    expected.add(nine);
+    expected.add(twelve);
+    expected.add(one);
+    expected.add(elven);
+    expected.add(five);
+
+    graph.AddNode(four);
+    graph.AddNode(nine);
+    graph.AddNode(one);
+    graph.AddNode(five);
+    graph.AddNode(twelve);
+    graph.AddNode(elven);
+
+    graph.AddEdge(four, nine);
+    graph.AddEdge(four, one);
+    graph.AddEdge(four, five);
+    graph.AddEdge(four, twelve);
+    graph.AddEdge(nine, twelve);
+    graph.AddEdge(one, twelve);
+    graph.AddEdge(one, elven);
+    graph.AddEdge(five, elven);
+    graph.AddEdge(elven, twelve);
+
+    expect(graph.depth(four)).toEqual(expected);
+  });
+    });
+  
