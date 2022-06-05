@@ -10,6 +10,7 @@ Write the following method for the Graph class:
 - Return: A collection of nodes in their pre-order depth-first traversal order
 - Program output: Display the collection
 ## Whiteboard Process
+![image](https://user-images.githubusercontent.com/90922969/172069521-8c237c4b-bfec-49d3-bfa8-36c736089d2e.png)
 
 ## Approach & Efficiency
 Time Complexity: O(n^2) 
