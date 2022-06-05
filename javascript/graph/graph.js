@@ -104,6 +104,32 @@ function businessTrip(graph, array) {
     return `${cost}$`;
   }
 }
+class DepthFirst extends Graph {
 
+  depth(firstNode) {
 
-module.exports = {Graph,businessTrip};
+    const visted = new Set();
+
+    const traverse = (node) => {
+
+      visted.add(node);
+
+      const neighbors = this.GetNeighbors(node);
+
+      for (let edge of neighbors) {
+
+        if (!visted.has(edge.vertex)) {
+         traverse(edge.vertex);
+        }
+      }
+    };
+   traverse(firstNode);
+   if (visted.size > 0){
+    return visted;
+   }
+   else
+    {return "empty graph"}
+  }
+}
+
+module.exports = {Graph,businessTrip,DepthFirst,Vertex};
