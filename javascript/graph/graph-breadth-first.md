@@ -10,7 +10,7 @@ Write the following method for the Graph class:
 <!-- Embedded whiteboard image -->
 
 ## Approach & Efficiency
-Time Complexity: O(n^2) 
+Time Complexity: O(n) 
 Space Complexity:O(n)
 
 ## Solution
