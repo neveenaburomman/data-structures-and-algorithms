@@ -1,4 +1,5 @@
 "use strict";
+const Queue =require('../stack-and-queue/queue')
 
 class Vertex {
   constructor(value) {
@@ -62,66 +63,41 @@ class Graph {
       return null;
     }
   }
-}
 
-bfs(startingNode)
-{
- 
-    // create a visited object
-    var visited = {};
- 
-    // Create an object for queue
-    var q = new Queue();
- 
-    // add the starting node to the queue
-    visited[startingNode] = true;
-    q.enqueue(startingNode);
- 
-    // loop until queue is empty
-    while (!q.isEmpty()) {
-        // get the element from the queue
-        var getQueueElement = q.dequeue();
- 
-        // passing the current vertex to callback function
-        console.log(getQueueElement);
- 
-        // get the adjacent list for current vertex
-        var get_List = this.AdjList.get(getQueueElement);
- 
-        // loop through the list and add the element to the
-        // queue if it is not processed yet
-        for (var i in get_List) {
-            var neigh = get_List[i];
- 
-            if (!visited[neigh]) {
-                visited[neigh] = true;
-                q.enqueue(neigh);
-            }
+}
+class BreadthFirst extends Graph {
+
+  breadth(startingNode) {
+    if (!startingNode) return 'INVALID NODE';
+    const queue = new Queue();
+
+    const visitedNodes = new Set();
+
+
+    queue.enqueue(startingNode);
+    visitedNodes.add(startingNode);
+
+    while (queue.peek()) {
+
+      const currentNode = queue.dequeue();
+      const neighbors = this.GetNeighbors(currentNode);
+      for (let neighbor of neighbors) {
+        const neighborNode = neighbor.vertex;
+        if (visitedNodes.has(neighborNode)) {
+          continue;
+        } else 
+        {
+          visitedNodes.add(neighborNode);
+          queue.enqueue(neighborNode);
         }
+      }
     }
-}
 
-function businessTrip(graph, array) {
-
-  let cost = 0;
-
-  for (let i = 0; i < array.length; i++) {
-        let edges = graph.GetNeighbors(array[i]);
-           for (let j = 0; j < edges.length; j++) 
-           {
-                if (edges[j].vertex === array[i + 1])
-                 {
-                   cost += edges[j].weight;
-                            }
-                                }
-  }
-   if (cost === 0) {
-    return null
-  }
-  else {
-    return `${cost}$`;
+    return visitedNodes.size > 0 ? visitedNodes : 'EMPTY GRAPH';
   }
 }
+
+
 class DepthFirst extends Graph {
 
   depth(firstNode) {
@@ -137,18 +113,38 @@ class DepthFirst extends Graph {
       for (let edge of neighbors) {
 
         if (!visted.has(edge.vertex)) {
-         traverse(edge.vertex);
+          traverse(edge.vertex);
         }
       }
     };
-   traverse(firstNode);
-   if (visted.size > 0){
-    return visted;
-   }
-   else
-    {return "empty graph"}
+    traverse(firstNode);
+    if (visted.size > 0) {
+      return visted;
+    }
+    else { return "empty graph" }
   }
 }
 
-module.exports = {Graph,businessTrip,DepthFirst,Vertex};
+
+function businessTrip(graph, array) {
+
+  let cost = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    let edges = graph.GetNeighbors(array[i]);
+    for (let j = 0; j < edges.length; j++) {
+      if (edges[j].vertex === array[i + 1]) {
+        cost += edges[j].weight;
+      }
+    }
+  }
+  if (cost === 0) {
+    return null
+  }
+  else {
+    return `${cost}$`;
+  }
+}
+console.log("hiiiiiiiiiiiiiiiiii")
+module.exports = { Graph, DepthFirst, Vertex, businessTrip, BreadthFirst };
 

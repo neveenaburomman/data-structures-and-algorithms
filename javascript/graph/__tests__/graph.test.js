@@ -1,6 +1,6 @@
 "use strict";
 
-let {Graph,businessTrip,DepthFirst,Vertex} = require("../graph");
+let {Graph,businessTrip,DepthFirst,Vertex,BreadthFirst } = require("../graph");
 
 
 
@@ -79,6 +79,7 @@ describe("testing the Graph", () => {
     expect(graph.isEmpty()).toEqual(null);
   });
 });
+
 describe("testing the businessTrip function ", () => {
   let graph = new Graph();
   graph.AddNode("Pandora")
@@ -112,7 +113,7 @@ graph.AddEdge("Naboo", "Narnia", 250)
   });
 });
 
-describe("testing the businessTrip function ", () => {
+describe("testing the DepthFirst ", () => {
 
   it('return all nodes depth first  in correct order', () => {
     const graph = new DepthFirst();
@@ -151,5 +152,48 @@ describe("testing the businessTrip function ", () => {
 
     expect(graph.depth(four)).toEqual(expected);
   });
+    });
+
+    describe('Graph Breadth Testing', () => {
+
+      it('should return all nodes breadth first properly', () => {
+        const graph = new BreadthFirst();
+
+        const Pandora = new Vertex('Pandora');
+        const Arendelle = new Vertex('Arendelle');
+        const Metroville = new Vertex('Metroville');
+        const Monstroplolis = new Vertex('Monstroplolis');
+        const Narnia = new Vertex('Narnia');
+        const Naboo = new Vertex('Naboo');
+
+        graph.AddNode(Pandora);
+        graph.AddNode(Arendelle);
+        graph.AddNode(Metroville);
+        graph.AddNode(Monstroplolis);
+        graph.AddNode(Narnia);
+        graph.AddNode(Naboo);
+
+        graph.AddEdge(Pandora, Arendelle);
+        graph.AddEdge(Arendelle, Metroville);
+        graph.AddEdge(Arendelle, Monstroplolis);
+        graph.AddEdge(Metroville, Monstroplolis);
+        graph.AddEdge(Metroville, Narnia);
+        graph.AddEdge(Metroville, Naboo);
+        graph.AddEdge(Monstroplolis, Naboo);
+        graph.AddEdge(Narnia, Naboo);
+
+        const expectedSet = new Set();
+        expectedSet.add(Pandora);
+        expectedSet.add(Arendelle);
+        expectedSet.add(Metroville);
+        expectedSet.add(Monstroplolis);
+        expectedSet.add(Narnia);
+        expectedSet.add(Naboo);
+    
+        
+
+        expect(graph.breadth(Pandora)).toEqual(expectedSet);
+      });
+     
     });
   
